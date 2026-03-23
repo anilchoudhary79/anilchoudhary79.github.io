@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anil Choudhary — CS Student & Developer</title>
+  <meta name="description" content="Portfolio of Anil Choudhary, Computer Science Student and Aspiring Software Developer" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar" id="navbar" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Go to top">AN<span class="dot">.</span></a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <i class="fa-solid fa-sun" id="themeIcon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+      <ul role="list">
+        <li><a href="#about" class="mobile-link">About</a></li>
+        <li><a href="#skills" class="mobile-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-link">Projects</a></li>
+        <li><a href="#resume" class="mobile-link">Resume</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero" aria-label="Introduction">
+      <div class="hero-bg-grid" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <p class="hero-greeting reveal">Hey, I'm</p>
+        <h1 class="hero-name reveal delay-1">Anil Choudhary<span class="cursor-blink">_</span></h1>
+        <p class="hero-tagline reveal delay-2">
+          <span class="typed-text" id="typedText"></span><span class="type-cursor" aria-hidden="true">|</span>
+        </p>
+        <p class="hero-sub reveal delay-3">
+          Third-year CS student building things that matter — one commit at a time.
+        </p>
+        <div class="hero-cta reveal delay-4">
+          <a href="#projects" class="btn btn-primary">View Projects <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#contact" class="btn btn-ghost">Contact Me</a>
+        </div>
+
+        <div class="hero-stats reveal delay-5" aria-label="Quick stats">
+          <div class="stat">
+            <span class="stat-num">3+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat-num">3rd</span>
+            <span class="stat-label">Year CS</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat-num">5+</span>
+            <span class="stat-label">Languages</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal delay-2" aria-hidden="true">
+        <div class="code-card">
+          <div class="code-card-header">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <span class="code-filename">about_me.py</span>
+          </div>
+          <pre class="code-card-body"><code><span class="c-keyword">class</span> <span class="c-class">anil</span>:
+  <span class="c-keyword">def</span> <span class="c-fn">__init__</span>(<span class="c-param">self</span>):
+    <span class="c-param">self</span>.name   = <span class="c-str">"Anil Choudhary"</span>
+    <span class="c-param">self</span>.role   = <span class="c-str">"CS Student"</span>
+    <span class="c-param">self</span>.year   = <span class="c-num">3</span>
+    <span class="c-param">self</span>.loves  = [
+      <span class="c-str">"Open Source"</span>,
+      <span class="c-str">"Problem Solving"</span>,
+      <span class="c-str">"Clean Code"</span>,
+    ]
+    <span class="c-param">self</span>.coffee = <span class="c-keyword">True</span> <span class="c-comment"># always</span>
+
+  <span class="c-keyword">def</span> <span class="c-fn">currently</span>(<span class="c-param">self</span>):
+    <span class="c-keyword">return</span> <span class="c-str">"Building cool stuff"</span></code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-label reveal">01 — About</div>
+        <h2 class="section-title reveal" id="about-heading">Who am I?</h2>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>I'm <strong>Anil Choudhary</strong>, a third-year Computer Science student at <strong>Lovely Professional University</strong>, passionate about building software that solves real problems.</p>
+            <p>My interests span <strong>full-stack web development</strong>, <strong>algorithms</strong>, and <strong>machine learning</strong>. I love contributing to open-source projects and practicing DSA problems where I can push my skills under pressure.</p>
+            <p>Long-term goal? Land a role as a <strong>software engineer at a product-driven company</strong> where I can work on systems that impact millions of users. Until then — keep shipping, keep learning.</p>
+
+            <div class="about-badges">
+              <span class="badge"><i class="fa-solid fa-graduation-cap"></i> B.Tech CSE, Year 3</span>
+              <span class="badge"><i class="fa-solid fa-location-dot"></i> Sikar, Rajasthan</span>
+              <span class="badge"><i class="fa-solid fa-circle-check" style="color:var(--accent)"></i> Open to Internships</span>
+            </div>
+          </div>
+
+          <div class="about-interests reveal delay-1">
+            <h3>Interests</h3>
+            <ul class="interest-list" role="list">
+              <li><i class="fa-solid fa-code"></i> Full-Stack Development</li>
+              <li><i class="fa-solid fa-brain"></i> Machine Learning</li>
+              <li><i class="fa-solid fa-shield-halved"></i> Linux</li>
+              <li><i class="fa-solid fa-server"></i> System Design</li>
+              <li><i class="fa-brands fa-github"></i> Open Source</li>
+              <li><i class="fa-solid fa-trophy"></i> Competitive Programming</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section skills" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-label reveal">02 — Skills</div>
+        <h2 class="section-title reveal" id="skills-heading">What I work with</h2>
+
+        <div class="skills-grid">
+
+          <!-- Languages -->
+          <div class="skill-category reveal">
+            <div class="skill-cat-header">
+              <i class="fa-solid fa-terminal"></i>
+              <h3>Languages</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info"><span>C++</span><span class="skill-pct">90%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Java</span><span class="skill-pct">80%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Python</span><span class="skill-pct">75%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>JavaScript</span><span class="skill-pct">85%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>SQL</span><span class="skill-pct">70%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Web Tech -->
+          <div class="skill-category reveal delay-1">
+            <div class="skill-cat-header">
+              <i class="fa-solid fa-globe"></i>
+              <h3>Web Technologies</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info"><span>React</span><span class="skill-pct">82%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Node.js / Express</span><span class="skill-pct">75%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>HTML & CSS</span><span class="skill-pct">90%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>REST APIs</span><span class="skill-pct">78%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>MongoDB</span><span class="skill-pct">65%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-category reveal delay-2">
+            <div class="skill-cat-header">
+              <i class="fa-solid fa-wrench"></i>
+              <h3>Tools & Platforms</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="tag"><i class="fa-brands fa-git-alt"></i> Git</span>
+              <span class="tag"><i class="fa-brands fa-github"></i> GitHub</span>
+              <span class="tag"><i class="fa-brands fa-docker"></i> Docker</span>
+              <span class="tag"><i class="fa-brands fa-linux"></i> Linux</span>
+              <span class="tag"><i class="fa-brands fa-aws"></i> AWS (basics)</span>
+              <span class="tag"><i class="fa-solid fa-code"></i> VS Code</span>
+              <span class="tag"><i class="fa-solid fa-vial"></i> Postman</span>
+              <span class="tag"><i class="fa-solid fa-fire"></i> Firebase</span>
+              <span class="tag"><i class="fa-solid fa-leaf"></i> Figma</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section projects" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-label reveal">03 — Projects</div>
+        <h2 class="section-title reveal" id="projects-heading">Things I've built</h2>
+
+        <!-- Filter Buttons -->
+        <div class="filter-bar reveal" role="group" aria-label="Filter projects by technology">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="react">React</button>
+          <button class="filter-btn" data-filter="python">Python</button>
+          <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+
+          <!-- Project 1 -->
+          <article class="project-card reveal" data-tags="react fullstack" tabindex="0">
+            <div class="project-card-inner">
+              <div class="project-top">
+                <div class="project-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                <div class="project-links">
+                  <a href="https://github.com/anilchoudhary79/Real-Time-Order-Tracking-and-Delivery-Updates-Portal.git" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for ShopSmart"><i class="fa-brands fa-github"></i></a>
+                </div>
+              </div>
+              <h3 class="project-title">Order Tracking System</h3>
+              <p class="project-desc">Built a delivery management system to create and track orders in real time. Implemented live updates for order status and driver location using real-time communication. Designed backend APIs for order, driver, and delivery flow, and created a dashboard to monitor active and completed deliveries.</p>
+              <div class="project-tech">
+                <span>React</span><span>Node.js</span><span>MongoDB</span><span>API's</span><span>Full Stack</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card reveal delay-1" data-tags="python ml" tabindex="0">
+            <div class="project-card-inner">
+              <div class="project-top">
+                <div class="project-icon"><i class="fa-solid fa-brain"></i></div>
+                <div class="project-links">
+                  <a href="https://github.com/anilchoudhary79/Real-Time-Process-Monitoring.git" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for SentimentScope"><i class="fa-brands fa-github"></i></a>
+                </div>
+              </div>
+              <h3 class="project-title">Real-Time Process Monitoring</h3>
+              <p class="project-desc">A graphical dashboard displaying real-time system data including CPU usage, memory consumption, and running processes. Visualizes system metrics using live-updating charts and refreshes data every 2 seconds.</p>
+              <div class="project-tech">
+                <span>Python</span><span>System Monitoring</span><span>Visualization</span><span>React</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card reveal delay-2" data-tags="react fullstack" tabindex="0">
+            <div class="project-card-inner">
+              <div class="project-top">
+                <div class="project-icon"><i class="fa-solid fa-list-check"></i></div>
+                
+              </div>
+              <h3 class="project-title">Church Management System</h3>
+              <p class="project-desc">A web-based platform for managing church activities, allowing users to book event slots, make donations, and receive notifications. Admins can approve events, manage schedules, and handle overall operations efficiently.</p>
+              <div class="project-tech">
+                <span>Full-Stack</span><span>Authentication</span><span>Notifications</span>
+              </div>
+            </div>
+          </article>
+
+          
+
+          
+
+          
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESUME ============ -->
+    <section class="section resume-section" id="resume" aria-labelledby="resume-heading">
+      <div class="container">
+        <div class="section-label reveal">04 — Resume</div>
+        <h2 class="section-title reveal" id="resume-heading">My Resume</h2>
+
+        <div class="resume-card reveal">
+          <div class="resume-left">
+            <i class="fa-solid fa-file-lines resume-icon" aria-hidden="true"></i>
+            <div>
+              <h3>Anil_Choudhary_Resume.pdf</h3>
+              <p>Updated 2025 · 1 page · Available for internships &amp; co-ops</p>
+            </div>
+          </div>
+          <a href="assets/Anil_Choudhary_Resume.pdf" class="btn btn-primary" download="Anil_Choudhary_Resume.pdf" aria-label="Download Anil Choudhary's resume PDF">
+            <i class="fa-solid fa-download"></i> Download Resume
+          </a>
+        </div>
+
+        <div class="experience-timeline reveal delay-1">
+          <h3 class="timeline-heading">Education &amp; Experience</h3>
+
+          <div class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta"><span class="timeline-date">2022 — Present</span><span class="timeline-tag">Education</span></div>
+              <h4>B.Tech in Computer Science</h4>
+              <p>Lovely Professional University</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta"><span class="timeline-date">Summer 2024</span><span class="timeline-tag">Internship</span></div>
+              <h4>Data Structure and Algorithms Intern</h4>
+              <p>CipherSchools. · Learned Many DSA Topics</p>
+            </div>
+          </div>
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-label reveal">05 — Contact</div>
+        <h2 class="section-title reveal" id="contact-heading">Let's talk</h2>
+        <p class="section-sub reveal">Have a project, opportunity, or just want to say hi? My inbox is always open.</p>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <a href="mailto:anil.choudhary@example.com" class="contact-link">
+              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <span class="contact-label">Email</span>
+                <span>x.anilchoudhary@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/anilchoudhary-v" target="_blank" rel="noopener noreferrer" class="contact-link">
+              <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
+              <div>
+                <span class="contact-label">LinkedIn</span>
+                <span>linkedin.com/in/anilchoudhary-v</span>
+              </div>
+            </a>
+            <a href="https://github.com/anilchoudhary79" target="_blank" rel="noopener noreferrer" class="contact-link">
+              <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+              <div>
+                <span class="contact-label">GitHub</span>
+                <span>github.com/anilchoudhary79</span>
+              </div>
+            </a>
+            <a href="https://twitter.com/anilchoudhary" target="_blank" rel="noopener noreferrer" class="contact-link">
+              <div class="contact-icon"><i class="fa-brands fa-x-twitter"></i></div>
+              <div>
+                <span class="contact-label">Twitter / X</span>
+                <span>@anilchoudhary79</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- ⚠️  Replace YOUR_FORMSPREE_ID below with your real ID from formspree.io -->
+          <form class="contact-form reveal delay-1" id="contactForm"
+      action="https://formspree.io/f/xreynzjw"
+      method="POST"
+      aria-label="Contact form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">Name</label>
+                <input type="text" id="fname" name="name" placeholder="Your Name" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="femail">Email</label>
+                <input type="email" id="femail" name="email" placeholder="Your Email" required autocomplete="email" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="fsubject">Subject</label>
+              <input type="text" id="fsubject" name="subject" placeholder="Whatever" />
+            </div>
+            <div class="form-group">
+              <label for="fmessage">Message</label>
+              <textarea id="fmessage" name="message" rows="5" placeholder="what you want to say ..." required></textarea>
+            </div>
+            <!-- Honeypot spam trap — hidden from real users, bots fill it in -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              Send Message <i class="fa-solid fa-paper-plane"></i>
+            </button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <span class="footer-logo">79<span class="dot">.</span></span>
+        <div class="footer-social" aria-label="Social links">
+          <a href="https://github.com/anilchoudhary79" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://linkedin.com/in/anilchoudhary-v" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://twitter.com/anilchoudharydev" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="mailto:x.anilchoudhary@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Designed &amp; built by <strong>Anil Choudhary</strong> · <span id="footerYear"></span></p>
+        <p class="footer-note">34.79.87 <i class="fa-solid fa-heart" style="color:var(--accent)"></i> </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
